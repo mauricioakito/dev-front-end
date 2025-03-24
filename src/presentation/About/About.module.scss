@@ -48,13 +48,27 @@
     color: white;
     background: #3182bd;
     text-decoration: none;
-  }
+    transition: 0.3s;
 
-  .downloadButton {
-    padding: 1rem 1.5rem;
-    color: #3182bd;
-    border: 1px solid #3182bd;
-    text-decoration: none;
+      &:hover {
+        background: #1d5e8c;
+        transition: 0.3s;
+      }
+      
+    }
+    
+    .downloadButton {
+      padding: 1rem 1.5rem;
+      color: #3182bd;
+      border: 1px solid #3182bd;
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        background: #f2f6fa;
+        transition: 0.3s;
+        // color: white;
+      }
   }
 
 }

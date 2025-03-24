@@ -30,6 +30,12 @@ header {
       text-transform: uppercase;
       font-size: 0.875rem;
       transition: 0.3s;
+      
+      &:hover {
+        color: #d4d4d4;
+        transition: 0.3s;
+      }
+
     }
   }
 }

@@ -6,31 +6,36 @@ const testimonials = [
     quote: 'Maurício é um excelente profissional, muito culto e cordial. Excelente pessoa para trabalhar junto e muito capaz de absorver novos conhecimentos e resolver problemas complexos.',
     author: 'Giovane Luiz Starch Perlin',
     title: 'Desenvolvedor Front End',
-    imageUrl: '/Recommendation/bolinha-de-golfe.jpg',
+    imageUrl: 'Recommendation/bolinha-de-golfe.jpg',
+    dataAos: "flip-left"
   },
   {
     quote: 'Altamente competente no que faz, muito prático e consegue passar seu conhecimento de maneira muito fácil com suas abstrações. Busca sempre aprender novas ferramentas e tecnologias de desenvolvimento para sua contínua melhoria de habilidades!',
     author: 'Gustavo Manca',
     title: 'Desenvolvedor Front End',
-    imageUrl: '/Recommendation/guga.jpg',
+    imageUrl: 'Recommendation/guga.jpg',
+    dataAos: "flip-up"
   },
   {
     quote: 'Motivado, trabalhador, de bem com a vida, excelente profissional, e sempre procura desenvolver um código limpo, aprender novas tecnologias e ajudar o próximo. Seu domínio no Front End é admirável.',
     author: 'Vitor Momberg',
     title: "Engenheiro de Software",
-    imageUrl: '/Recommendation/cearense.jpg',
+    imageUrl: 'Recommendation/cearense.jpg',
+    dataAos: "flip-right"
   },
   {
     quote: 'Mauricio é uma pessoa muito dedicada, tive o prazer de estudar com ele na FATEC Itapetininga. La tivemos muito desafios juntos, e nos momentos mais desafiadores foi onde ele demonstrou sua qualidades, motivando a todos na equipe.',
     author: 'Marco Antonio',
     title: "Engenheiro de Segurança da Informação",
-    imageUrl: '/Recommendation/higienico.jpg',
+    imageUrl: 'Recommendation/higienico.jpg',
+    dataAos: "flip-left"
   },
   {
     quote: 'Maurício tem uma sólida experiência e compreensão em UX, UI e desenvolvimento Front-end. Ele fez um ótimo trabalho em todos os projetos em que trabalhamos juntos.',
     author: 'Cristiano Ventura',
     title: "Engenheiro de Software",
-    imageUrl: '/Recommendation/statham.jpg',
+    imageUrl: 'Recommendation/statham.jpg',
+    dataAos: "flip-up"
   },
 ];
 
@@ -59,7 +64,7 @@ export const Recommendation = () => {
         <span className={styles.subtitle}>Alguns colegas destacam minha dedicação e resultados. Recomendações refletem a confiança em minhas habilidades e o impacto positivo do meu trabalho. Testemunhos de uma jornada profissional de sucesso.</span>
         <div className={styles.grid}>
           {testimonials.map((testimonial, index) => (
-            <div key={index} className={styles.testimonial}>
+            <div key={index} className={styles.testimonial} data-aos={testimonial.dataAos} data-aos-offset='1000' data-aos-duration="500">
               {testimonial.imageUrl && (
                 <div className={styles.imageContainer}>
                   <img

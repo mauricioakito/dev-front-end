@@ -7,17 +7,17 @@ export const Experiences = () => {
   return (
     <section id="experiences" className={styles.experiences}>
       <div className={classNames("innerContainer", styles.innerContainer)}>
-        <h2 className={styles.title}>Experiências</h2>
-        <span className={styles.subtitle}>
+        <h2 className={styles.title} data-aos="fade-down" data-aos-offset="900">Experiências</h2>
+        <span className={styles.subtitle} data-aos="fade-down" data-aos-offset="800">
           Ao longo da minha carreira, tive a oportunidade de trabalhar em
           diversos projetos e empresas, adquirindo experiências valiosas que me
           permitiram aprimorar minhas habilidades e conhecimentos em
           desenvolvimento web e aplicações web.
         </span>
       </div>
-      {experiences.map((item: IExperiencesProps) => {
+      {experiences.map((item: IExperiencesProps, index: number) => {
         return (
-          <div className={styles.itemContainer}>
+          <div className={styles.itemContainer} data-aos={index % 2 === 0 ? "fade-left" : "fade-right"} data-aos-offset="850">
             <div
               className={classNames("innerContainer", styles.innerContainer)}
             >

@@ -28,17 +28,17 @@ export const BannerHero = () => {
       <Slider {...settings} className={styles.slider}>
         <img
           className={styles.bannerImage}
-          src="/Bannerhero/bannerhero.jpg"
+          src="Bannerhero/bannerhero.jpg"
           alt="Banner"
         />
         <img
           className={styles.bannerImage}
-          src="/Bannerhero/bannerhero2.jpg"
+          src="Bannerhero/bannerhero2.jpg"
           alt="Banner"
         />
         <img
           className={styles.bannerImage}
-          src="/Bannerhero/bannerhero3.jpg"
+          src="Bannerhero/bannerhero3.jpg"
           alt="Banner"
         />
       </Slider>
@@ -46,17 +46,15 @@ export const BannerHero = () => {
       <div className={styles.overlay}></div>
 
       <div className={styles.bannerText}>
-        <img className={styles.profileImage} src="/Bannerhero/mauricio.png" alt="" />
+        <img className={styles.profileImage} src="Bannerhero/mauricio.png" alt="" />
         <h1 className={styles.bannerTitle}>Olá, eu sou o Maurício</h1>
         <ReactTyped
           strings={[
             "Sou desenvolvedor Front End",
             "com 7 anos de experiencia",
-            "criando projetos de impacto",
-            "se desejar conferir um pouco da minha trajetória",
-            "é só acessar o meu LinkedIn :)",
+            'acesse o meu LinkedIn para saber mais'
           ]}
-          typeSpeed={40}
+          typeSpeed={20}
           backSpeed={40}
           backDelay={2000}
         />

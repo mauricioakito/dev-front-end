@@ -6,8 +6,8 @@ export const About = () => {
   return (
     <section id="about" className={styles.aboutSection}>
       <div className={classNames('innerContainer', styles.innerContainer)}>
-        <img className={styles.portrait} src="/About/man.png" alt="Man" />
-        <div className={styles.textContainer}>
+        <img className={styles.portrait} src="About/man.png" alt="Man" data-aos="fade-right" data-aos-duration="500"/>
+        <div className={styles.textContainer} data-aos="fade-left" data-aos-duration="500">
           <h2 className={styles.title}>SOBRE MIM</h2>
 
           <p className={styles.paragraph}>Olá, meu nome é Mauricio Kitazawa e sou um desenvolvedor front-end com 7 anos de experiência construindo aplicações web escaláveis, performáticas e centradas na experiência do usuário. Minha especialidade é trabalhar com React.js, Next.js, TypeScript e WordPress, desenvolvendo interfaces responsivas e intuitivas que melhoram a usabilidade e a conversão de produtos digitais.</p>

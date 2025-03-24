@@ -9,8 +9,8 @@ export const Services = () => {
 
       <div className={classNames("innerContainer", styles.innerContainer)}>
         <div className={styles.textContainer}>
-          <h2 className={styles.title}>SERVIÇOS</h2>
-          <span className={styles.subtitle}>
+          <h2 className={styles.title} data-aos="flip-up">SERVIÇOS</h2>
+          <span className={styles.subtitle} data-aos="flip-up">
             Trabalho com segmentos de desenvolvimento de websites, aplicações
             web e ofereço serviços adicionais como otimizações de sites e
             manutenção.
@@ -18,11 +18,11 @@ export const Services = () => {
         </div>
         <div>
           <div className={styles.firstLine}>
-            <div className={styles.biggerCard}>
+            <div className={styles.biggerCard}  data-aos="fade-right">
               <div className={styles.iconTitleContainer}>
                 <img
                   className={styles.cardIcon}
-                  src="/Services/landing-page-icon.svg"
+                  src="Services/landing-page-icon.svg"
                   alt="Criação de Landing Pages"
                 />
                 <div className={styles.titleSubtitleContainer}>
@@ -37,16 +37,16 @@ export const Services = () => {
               </p>
               <a
                 className={styles.cardLink}
-                href="https://wa.me/5515988136907?text=Olá%20gostaria%20de%20um%20orçamento%20para%20o%20serviço%20de%criação%20de%20landing%20page"
+                href="https://wa.me/5515988136907?text=Olá%20gostaria%20de%20um%20orçamento%20para%20o%20serviço%20de%20criação%20de%20landing%20page"
               >
                 Solicite um orçamento
               </a>
             </div>
-            <div className={styles.biggerCard}>
+            <div className={styles.biggerCard}  data-aos="fade-left">
               <div className={styles.iconTitleContainer}>
                 <img
                   className={styles.cardIcon}
-                  src="/Services/website-icon.svg"
+                  src="Services/website-icon.svg"
                   alt="Desenvolvimento de sites"
                 />
                 <div className={styles.titleSubtitleContainer}>
@@ -69,12 +69,12 @@ export const Services = () => {
               </a>
             </div>
           </div>
-          <div className={styles.secondLine}>
+          <div className={styles.secondLine} data-aos="fade-up">
             <div className={styles.smallerCard}>
               <div className={styles.iconTitleContainer}>
                 <img
                   className={styles.cardIcon}
-                  src="/Services/seo-icon.svg"
+                  src="Services/seo-icon.svg"
                   alt="Otimização para SEO"
                 />
                 <div className={styles.titleSubtitleContainer}>
@@ -99,7 +99,7 @@ export const Services = () => {
               <div className={styles.iconTitleContainer}>
                 <img
                   className={styles.cardIcon}
-                  src="/Services/maintenance-icon.svg"
+                  src="Services/maintenance-icon.svg"
                   alt="Manutenção de sites"
                 />
                 <div className={styles.titleSubtitleContainer}>
@@ -124,7 +124,7 @@ export const Services = () => {
               <div className={styles.iconTitleContainer}>
                 <img
                   className={styles.cardIcon}
-                  src="/Services/training-icon.svg"
+                  src="Services/training-icon.svg"
                   alt="Treinamento"
                 />
                 <div className={styles.titleSubtitleContainer}>
@@ -140,7 +140,7 @@ export const Services = () => {
               </p>
               <a
                 className={styles.cardLink}
-                href="https://wa.me/5515988136907?text=Olá%20gostaria%20de%20um%20orçamento%20para%20o%20serviço%20de%treinamento%técnico"
+                href="https://wa.me/5515988136907?text=Olá%20gostaria%20de%20um%20orçamento%20para%20o%20serviço%20de%20treinamento%20técnico"
               >
                 Solicite um orçamento
               </a>
