@@ -3,11 +3,17 @@ import styles from './Contact.module.scss'
 import { FaLinkedinIn } from 'react-icons/fa6'
 import { RiWhatsappLine } from 'react-icons/ri'
 import { BiLogoGmail } from 'react-icons/bi'
+import useWindowDimensions from '../../utils/useWindowDimensions'
 
 export const Contact = () => {
+
+  const { width } = useWindowDimensions()
+
+  const isMobile = width && width > 1024;
+
   return (
     <section id='contact' className={styles.contact}>
-      <div className="innerContainer" data-aos='fade-up' data-aos-offset="950">
+      <div className="innerContainer" data-aos='fade-up' data-aos-offset={isMobile ? "0" : "950"}>
         <h2 className={styles.title}>CONTATO</h2>
         <span className={styles.subtitle}>Gostaria de contratar-me para um projeto? <br/> Basta entrar em contato pelos meios abaixo</span>
         <div className={styles.infoContainer}>
