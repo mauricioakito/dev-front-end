@@ -45,9 +45,13 @@ export const Recommendation = () => {
   const [height, setHeight] = useState<number>(0)
   const elementRefs = useRef<HTMLQuoteElement[] | null>([]);
 
-    const { width } = useWindowDimensions()
-  
-    const isMobile = width && width > 1024;
+  const { width } = useWindowDimensions()
+  const [state, setState] = useState({ isMobile: true })
+
+  useEffect(() => {
+    const isMobile = !!(width && width <= 1024)
+    setState({ isMobile })
+  }, [width])
 
   useEffect(() => {
     if (elementRefs && elementRefs.current && elementRefs.current.length > 0) {
@@ -69,7 +73,7 @@ export const Recommendation = () => {
         <span className={styles.subtitle}>Alguns colegas destacam minha dedicação e resultados. Recomendações refletem a confiança em minhas habilidades e o impacto positivo do meu trabalho. Testemunhos de uma jornada profissional de sucesso.</span>
         <div className={styles.grid}>
           {testimonials.map((testimonial, index) => (
-            <div key={index} className={styles.testimonial} data-aos={testimonial.dataAos} data-aos-offset={isMobile ? "0" : "1000"} data-aos-duration="500">
+            <div key={index} className={styles.testimonial} data-aos={testimonial.dataAos} data-aos-offset={state.isMobile ? "0" : "1000"} data-aos-duration="500">
               {testimonial.imageUrl && (
                 <div className={styles.imageContainer}>
                   <img

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Contact.module.scss'
 import { FaLinkedinIn } from 'react-icons/fa6'
 import { RiWhatsappLine } from 'react-icons/ri'
@@ -8,12 +8,16 @@ import useWindowDimensions from '../../utils/useWindowDimensions'
 export const Contact = () => {
 
   const { width } = useWindowDimensions()
+  const [state, setState] = useState({ isMobile: true })
 
-  const isMobile = width && width > 1024;
+  useEffect(() => {
+    const isMobile = !!(width && width <= 1024)
+    setState({ isMobile })
+  }, [width])
 
   return (
     <section id='contact' className={styles.contact}>
-      <div className="innerContainer" data-aos='fade-up' data-aos-offset={isMobile ? "0" : "950"}>
+      <div className="innerContainer" data-aos='fade-up' data-aos-offset={state.isMobile ? "0" : "950"}>
         <h2 className={styles.title}>CONTATO</h2>
         <span className={styles.subtitle}>Gostaria de contratar-me para um projeto? <br/> Basta entrar em contato pelos meios abaixo</span>
         <div className={styles.infoContainer}>
@@ -34,3 +38,4 @@ export const Contact = () => {
     </section>
   )
 }
+
