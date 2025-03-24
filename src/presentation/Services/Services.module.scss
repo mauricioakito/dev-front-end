@@ -65,20 +65,14 @@
   .firstLine {
     display: flex;
     gap: 1rem;
+    flex-direction: column;
   }
 
   .secondLine {
     display: flex;
     gap: 1rem;
     margin: 1rem 0 0;
-  }
-
-  .smallerCard {
-    width: 33.3%;
-  }
-
-  .biggerCard {
-    width: 50%;
+    flex-direction: column;
   }
 
   .smallerCard, .biggerCard {
@@ -147,5 +141,21 @@
       }
     }
   
+
+    @media screen and (min-width: 1024px) {
+      .firstLine,
+      .secondLine {
+        flex-direction: row;
+      }
+
+      .smallerCard {
+        width: 33.3%;
+      }
+    
+      .biggerCard {
+        width: 50%;
+      }
+
+    }
 
 }

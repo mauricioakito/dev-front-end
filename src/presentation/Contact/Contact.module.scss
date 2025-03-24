@@ -24,6 +24,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .infoItem {
@@ -72,6 +74,12 @@
 
     }
 
+  }
+
+  @media screen and (min-width: 1024px) {
+    .infoContainer {
+      flex-direction: row;
+    }
   }
 
 }

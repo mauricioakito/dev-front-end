@@ -68,13 +68,15 @@
     .innerContainer {
       display: flex;
       justify-content: space-between;
+      gap: 1rem;
+      padding: 0 1rem;
     }
 
     .itemTextInfo {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      width: 50%;
+      // width: 50%;
       line-height: 1.6;
       // color: #fff;
 
@@ -95,10 +97,28 @@
 
     .text {
       margin: 0 auto;
-      width: 50%;
       line-height: 1.6;
+      padding: 0 2rem 0 0;
       // color: #fff;
     }
 
   }
+
+  @media screen and (min-width: 1024px){
+    .itemTextInfo {
+      width: 50%;
+    }
+
+    .text {
+      width: 50%;
+      padding: 0;
+    }
+
+    .innerContainer {
+      gap: 0;
+      padding: 0;
+    }
+
+  }
+
 }

@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <section id="about" className={styles.aboutSection}>
       <div className={classNames('innerContainer', styles.innerContainer)}>
-        <img className={styles.portrait} src="About/man.png" alt="Man" data-aos="fade-right" data-aos-duration="500"/>
+        <img className={styles.portrait} src="About/me.png" alt="Man" data-aos="fade-right" data-aos-duration="500"/>
         <div className={styles.textContainer} data-aos="fade-left" data-aos-duration="500">
           <h2 className={styles.title}>SOBRE MIM</h2>
 

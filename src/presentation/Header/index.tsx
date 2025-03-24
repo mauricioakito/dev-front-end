@@ -30,7 +30,6 @@ export const Header = () => {
         <a href="/"><img className={styles.imageHeader} src="favicon.svg" alt="Maurício Kitazawa" /></a>
         <div className={styles.headerLinks}>
           <a href="#about">Sobre</a>
-          <a href="#skills">Habilidades</a>
           <a href="#services">Serviços</a>
           <a href="#portfolio">Portfólio</a>
           <a href="#experiences">Experiencias</a>

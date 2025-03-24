@@ -1,6 +1,8 @@
 .innerContainer {
   max-width: 1280px;
   margin: 0 auto;
+  flex-direction: column;
+  width: 100%;
 }
 
 html {
@@ -10,4 +12,14 @@ html {
 h2 {
   font-size: 2rem;
   text-transform: uppercase;
+}
+
+section {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .innerContainer {
+    flex-direction: row;
+  }
 }

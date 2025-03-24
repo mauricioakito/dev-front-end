@@ -3,6 +3,7 @@
   min-height: 100vh;  
   display: flex;
   align-items: center;
+  padding: 1rem;
 
   .innerContainer {
     display: flex;
@@ -13,6 +14,7 @@
   .portrait {
     width: auto;
     height: 100%;
+    max-width: 300px;
   }
 
   .paragraph, .personalInfoParagraph, .personalInfoParagraph strong {
@@ -34,7 +36,7 @@
 
   .personalInfoContainer {
     display: flex;
-    gap: 3rem;
+    flex-direction: column;
   }
 
   .buttonContainer {
@@ -44,7 +46,7 @@
   }
 
   .experienceButton {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     color: white;
     background: #3182bd;
     text-decoration: none;
@@ -58,7 +60,7 @@
     }
     
     .downloadButton {
-      padding: 1rem 1.5rem;
+      padding: 1rem;
       color: #3182bd;
       border: 1px solid #3182bd;
       text-decoration: none;
@@ -69,6 +71,28 @@
         transition: 0.3s;
         // color: white;
       }
+  }
+
+  .textContainer {
+    width: 100%;
+  }
+
+  
+  @media screen and (min-width: 1024px){
+    .aboutSection {
+      padding: 0 1rem;
+    }
+    .personalInfoContainer {
+      flex-direction: row;
+      gap: 3rem;
+    }
+
+    .experienceButton,
+      .downloadButton {
+        padding: 1rem 1.5rem;
+      }
+  
+
   }
 
 }
