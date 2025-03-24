@@ -1,0 +1,13 @@
+.innerContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}

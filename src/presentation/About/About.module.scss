@@ -1,0 +1,60 @@
+.aboutSection {
+
+  min-height: 100vh;  
+  display: flex;
+  align-items: center;
+
+  .innerContainer {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .portrait {
+    width: auto;
+    height: 100%;
+  }
+
+  .paragraph, .personalInfoParagraph, .personalInfoParagraph strong {
+    font-family: "Quicksand", sans-serif;
+  } 
+
+  .paragraph {
+    line-height: 1.6;
+  }
+
+  .personalInfoParagraph {
+    margin: 0.5rem 0;
+
+    strong  {
+      margin-right: 0.5rem;
+    }
+
+  }
+
+  .personalInfoContainer {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .buttonContainer {
+    margin: 2rem 0 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .experienceButton {
+    padding: 1rem 1.5rem;
+    color: white;
+    background: #3182bd;
+    text-decoration: none;
+  }
+
+  .downloadButton {
+    padding: 1rem 1.5rem;
+    color: #3182bd;
+    border: 1px solid #3182bd;
+    text-decoration: none;
+  }
+
+}
