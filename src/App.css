@@ -18,6 +18,10 @@ section {
   overflow: hidden;
 }
 
+.blocked {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 1024px) {
   .innerContainer {
     flex-direction: row;

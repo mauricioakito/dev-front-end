@@ -1,42 +1,128 @@
-import React, { useEffect, useState } from 'react'
-import styles from './Header.module.scss'
-import classNames from 'classnames';
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+import styles from "./Header.module.scss";
+import classNames from "classnames";
+import { IoMdMenu } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
+import HandleScroll from "../../utils/handleScroll";
+import { BlockScroll } from "../../utils/blockScroll";
 
-export const Header = () => {
+const headerOptions = [
+  {
+    href: "#about",
+    text: "Sobre",
+  },
+  {
+    href: "#services",
+    text: "Serviços",
+  },
+  {
+    href: "#portfolio",
+    text: "Portfólio",
+  },
+  {
+    href: "#experiences",
+    text: "Experiencias",
+  },
+  {
+    href: "#recommendation",
+    text: "Recomendações",
+  },
+  {
+    href: "#contact",
+    text: "Contato",
+  },
+];
 
-  const [scrolled, setScrolled] = useState(false);
+const HeaderLinks = ({
+  setIsOpen,
+}: {
+  setIsOpen?: Dispatch<SetStateAction<boolean>>;
+}) => {
+  return (
+    <div className={styles.headerLinks}>
+      <button
+        className={styles.closeIcon}
+        onClick={() => setIsOpen && setIsOpen(false)}
+      >
+        <IoClose size="2rem" color="#fff" />
+      </button>
+      {headerOptions.map((item) => {
+        return (
+          <a href={item.href} onClick={() => setIsOpen && setIsOpen(false)}>
+            {item.text}
+          </a>
+        );
+      })}
+    </div>
+  );
+};
+
+const Mobile = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+  HandleScroll(setScrolled);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    BlockScroll(isOpen)
+  }, [isOpen])
+  
 
   return (
-    <header className={classNames({
-      [styles.hasScrolled]: scrolled
-    })}>
-      <div className={styles.internalContainer}>
-        <a href="/"><img className={styles.imageHeader} src="favicon.svg" alt="Maurício Kitazawa" /></a>
-        <div className={styles.headerLinks}>
-          <a href="#about">Sobre</a>
-          <a href="#services">Serviços</a>
-          <a href="#portfolio">Portfólio</a>
-          <a href="#experiences">Experiencias</a>
-          <a href="#recommendation">Recomendações</a>
-          <a href="#contact">Contato</a>
-        </div>
+    <header
+      className={classNames(styles.headerMobile, {
+        [styles.hasScrolled]: scrolled,
+      })}
+    >
+      <div className={styles.outerLinks}>
+        <a href="/">
+          <img
+            className={styles.imageHeader}
+            src="favicon.svg"
+            alt="Maurício Kitazawa"
+          />
+        </a>
+        <button className={styles.menu} onClick={() => setIsOpen(!isOpen)}>
+          <IoMdMenu size="2rem" color={!scrolled ? "#fff" : "#000" } />
+        </button>
+      </div>
+      <div
+        className={classNames(styles.internalContainer, {
+          [styles.drawerOpen]: isOpen,
+        })}
+      >
+        <HeaderLinks setIsOpen={setIsOpen} />
       </div>
     </header>
-  )
-}
+  );
+};
+
+const Desktop = () => {
+  const [scrolled, setScrolled] = useState<boolean>(false);
+
+  HandleScroll(setScrolled);
+
+  return (
+    <header
+      className={classNames({
+        [styles.hasScrolled]: scrolled,
+      })}
+    >
+      <div className={styles.internalContainer}>
+        <a href="/">
+          <img
+            className={styles.imageHeader}
+            src="favicon.svg"
+            alt="Maurício Kitazawa"
+          />
+        </a>
+        <HeaderLinks />
+      </div>
+    </header>
+  );
+};
+
+export const Header = {
+  Mobile,
+  Desktop,
+};
