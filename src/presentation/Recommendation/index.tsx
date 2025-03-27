@@ -90,7 +90,7 @@ export const Recommendation = () => {
                   }
                 }}
                 className={styles.quote}
-                style={{ height: height > 0 ? `${height}px` : 'auto' }}
+                style={{ height: !state.isMobile && height > 0 ? `${height}px` : 'auto' }}
               >
                 "{testimonial.quote}"
               </blockquote>
