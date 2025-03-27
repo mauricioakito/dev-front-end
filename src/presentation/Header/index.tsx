@@ -75,7 +75,7 @@ const Mobile = () => {
       })}
     >
       <div className={styles.outerLinks}>
-        <a href="/">
+        <a href="https://mauricioakito.github.io/dev-front-end">
           <img
             className={styles.imageHeader}
             src="favicon.svg"
@@ -109,7 +109,7 @@ const Desktop = () => {
       })}
     >
       <div className={styles.internalContainer}>
-        <a href="/">
+        <a href="https://mauricioakito.github.io/dev-front-end">
           <img
             className={styles.imageHeader}
             src="favicon.svg"
