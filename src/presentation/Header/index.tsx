@@ -21,7 +21,7 @@ const headerOptions = [
   },
   {
     href: "#experiences",
-    text: "Experiencias",
+    text: "Experiências",
   },
   {
     href: "#recommendation",

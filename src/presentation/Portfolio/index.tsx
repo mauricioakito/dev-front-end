@@ -7,7 +7,7 @@ export const Portfolio = () => {
   return (
     <section id="portfolio" className={styles.portfolio}>
       <div className={classNames("innerContainer", styles.innerContainer)}>
-        <h2 className={styles.title} data-aos="fade-up">PORTFOLIO</h2>
+        <h2 className={styles.title} data-aos="fade-up">PORTFÓLIO</h2>
         <p className={styles.subtitle} data-aos="fade-up">Aqui você encontrará uma seleção dos meus projetos mais recentes e relevantes. Cada projeto representa um desafio único e uma oportunidade de aplicar minhas habilidades e conhecimentos para criar soluções digitais eficazes.</p>
         <div className={styles.portfolioContainer}>
           {portfolio.map((item: IPortfolioProps) => {

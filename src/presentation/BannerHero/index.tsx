@@ -49,6 +49,7 @@ export const BannerHero = () => {
         <img className={styles.profileImage} src="Bannerhero/mauricio.png" alt="" />
         <h1 className={styles.bannerTitle}>Olá, eu sou o Maurício</h1>
         <ReactTyped
+          className={styles.reactTyped}
           strings={[
             "Sou desenvolvedor Front End",
             "com 7 anos de experiencia",
