@@ -31,7 +31,7 @@ export const About = () => {
 
           <div className={styles.buttonContainer}>
             <a className={styles.experienceButton} href="#experiences">Experiências</a>
-            <a className={styles.downloadButton} href="/About/curriculo.pdf" target="_blank" download>Baixar Currículo</a>
+            <a className={styles.downloadButton} href="/dev-front-end/About/curriculo.pdf" target="_blank" download>Baixar Currículo</a>
           </div>
         </div>
       </div>
